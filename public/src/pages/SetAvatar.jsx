@@ -23,7 +23,9 @@ export default function SetAvatar() {
   };
 
   useEffect(() => {
-    if (!localStorage.getItem("chat-app-user")) navigate("/login");
+    if (!localStorage.getItem("chat-app-user")) {
+      navigate("/login");
+    }
   }, [navigate]);
 
   const setProfilePicture = async () => {
